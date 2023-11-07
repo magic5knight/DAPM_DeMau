@@ -1,0 +1,38 @@
+@model Book
+<h1 style="text-align: center;">Book Details</h1>
+<div class="row">
+    <hr>
+    <div class="col-sm-6">
+        <img src="~/images/@Model.BookImage" style="width: 400px">
+        <dl class="row">
+            <dt class="col-sm-4">
+                <h2 class="text-info">
+                    Tên Sách
+                </h2>
+            </dt>
+            <dd class="col-sm-8">
+                <h2 class="text-danger">
+                    @Model.BookName
+                </h2>
+            </dd>
+            <dt class="col-sm-4">
+                <label>Mô tả chi tiết</label>
+            </dt>
+            <dd class="col-sm-8">
+                @Model.Description
+            </dd>
+            <dt class="col-sm-4">
+                <label>Giá</label>
+            </dt>
+            <dd class="col-sm-8">
+                @Model.Price.ToString("0,000") VND
+            </dd>
+            <dt class="col-sm-4">
+                <label>Số lượng</label>
+            </dt>
+            <dd class="col-sm-8">
+                @Model.Quantity cuốn
+            </dd>
+        </dl>
+    </div>
+</div>
